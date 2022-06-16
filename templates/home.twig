@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+
+{% block head %}
+	<title>Hello, world!</title>
+{% endblock %}
+
+{% block body %}
+	<div class="card text-center" style="width: 18rem;">
+		<div class="card-header">{{ owner.accroche }}</div>
+		<img src="assets/img/{{ owner.photo }}" alt="">
+		<div class="card-body">
+			<h5 class="card-title">{{ owner.nom }}
+				{{ owner.prenom }}</h5>
+			<p class="card-text"><a href="mailto:{{ owner.mail }}">{{ owner.mail }}</a></p>
+			<p class="card-text"><a href="tel:{{ owner.telephone }}">{{ owner.telephone }}</a></p>
+			<a href="#" class="btn btn-primary">Télécharger mon cv [PDF]</a>
+            <div class="row">
+            <div class="col">LinkedIn</div>
+            <div class="col">GitHub</div></div>
+		</div>
+	</div>
+{% endblock %}
